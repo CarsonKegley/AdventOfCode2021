@@ -1,7 +1,4 @@
-from typing import Container
-
-
-file = open("./dayOne/input.txt", "r")
+file = open("./input.txt", "r")
 
 content = file.read()
 content_list = content.split("\n")
@@ -9,8 +6,7 @@ content_list_int = []
 depthIncreases = 0
 depthIncreasesTripple = 0
 
-# for element in content_list:
-#     content_list_int.append(int(element))
+
 
 for index in range(1,len(content_list)):
     if content_list[index] > content_list[index-1]:
@@ -22,7 +18,6 @@ for index in range(0,len(content_list)-3):
     if primaryTripple < secondaryTripple:
         depthIncreasesTripple += 1
 
-print(content_list)
 print(depthIncreases)
 print(depthIncreasesTripple)
 
